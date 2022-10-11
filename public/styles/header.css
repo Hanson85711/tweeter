@@ -1,0 +1,21 @@
+
+header {  
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #379ffa;
+  background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  justify-content: flex-end;
+  align-items: center;
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
