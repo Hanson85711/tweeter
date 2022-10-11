@@ -15,7 +15,7 @@ span {
   display: flex;
   align-items: flex-end;
   justify-content: left;
-  font-family: "Bungee";
+  font-family: "Bungee", sans-serif;
 }
 
 span.tweet{ 

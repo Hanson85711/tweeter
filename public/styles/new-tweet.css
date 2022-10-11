@@ -1,0 +1,40 @@
+.new-tweet{
+  position:relative;
+  top: 20px;
+  width: 100%;
+}
+textarea#tweet-text {
+  outline: 0;
+  border-width: 0 0 3px;
+  text-align: bottom;
+  border-color: black;
+  background-color: rgba(238, 238, 238, 0);
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+label[for=tweet-text] {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.tweet-form-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tweet-button {
+  font-family:'Bungee',sans-serif;
+  color:#FFFFFF;
+  background-color:#3369ff;
+  padding:0.5em 1.0em;
+  border-radius:0.2em;
+}
+
+.counter {
+  font-family:'Bungee',sans-serif;
+  align-self: flex-end;
+}
