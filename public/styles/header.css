@@ -1,5 +1,5 @@
 
-header {  
+header#main-header{  
   display: flex;
   flex-direction: column;
   height: 520px;
@@ -13,6 +13,7 @@ header {
 }
 
 div{
+  
   display: flex;
   flex-direction: column;
   justify-content: center;

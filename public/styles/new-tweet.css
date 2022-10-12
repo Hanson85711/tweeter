@@ -3,7 +3,9 @@
   top: 20px;
   width: 100%;
 }
+
 textarea#tweet-text {
+  resize: none;
   outline: 0;
   border-width: 0 0 3px;
   text-align: bottom;
