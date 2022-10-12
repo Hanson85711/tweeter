@@ -7,6 +7,10 @@ article.tweet{
   gap: 20px;
 }
 
+article.tweet:hover{
+  box-shadow: 7px 10px #a8acb6;
+}
+
 article.tweet header{
   position:relative;
   top: 10px;
@@ -39,10 +43,6 @@ div.tweet-options{
   display: flex;
   flex-direction: row;
   gap: 10px;
-}
-
-div.tweet-big-container:hover{
-  box-shadow: 7px 10px #a8acb6;
 }
 
 span.tweeter-name {
