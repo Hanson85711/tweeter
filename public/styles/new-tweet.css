@@ -29,7 +29,7 @@ label[for=tweet-text] {
 .tweet-button {
   font-family:'Bungee',sans-serif;
   color:#FFFFFF;
-  background-color:#3369ff;
+  background-color: #4056A1;
   padding:0.5em 1.0em;
   border-radius:0.2em;
 }
@@ -37,4 +37,10 @@ label[for=tweet-text] {
 .counter {
   font-family:'Bungee',sans-serif;
   align-self: flex-end;
+}
+
+.redcounter {
+  font-family:'Bungee',sans-serif;
+  align-self: flex-end;
+  color:red;
 }

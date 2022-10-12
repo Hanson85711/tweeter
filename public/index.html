@@ -23,11 +23,13 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
     <!-- External Icons imported from Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
@@ -59,7 +61,7 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-form-div">
             <button type="submit" class="tweet-button" >Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" class="counter" for="tweet-text" id="charcounter">140</output>
           </div>
         </form>
       </section>
