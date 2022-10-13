@@ -31,6 +31,8 @@ body {
   display: flex;
   align-self: center;
   flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 40px;
   width: 90%;
   background-color: #f4ecec;
  }
