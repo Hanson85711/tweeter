@@ -44,8 +44,18 @@ $(document).ready(function() {
     event.preventDefault();
     const dataForAjax = $('.tweet-form').serialize();
 
+    //Error Message reveal if trying to submit when over chara limit
     if ($('#tweet-text').val().length > 140) {
-      return alert("Message over character limit");
+      return $('.hidden-error-msg').slideDown("slow", function () {
+       //anim finished
+      })
+    }
+
+    //Submitting within chara limit makes error message go away
+    if ($('#tweet-text').val().length < 140) {
+      $('.hidden-error-msg').slideUp("slow", function(){
+        //anim finished
+      });
     }
 
     //Sending to server via POST request
