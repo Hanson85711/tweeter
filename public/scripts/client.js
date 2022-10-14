@@ -82,6 +82,12 @@ $(document).ready(function() {
     const handle = tweetobj.user.handle;
     const content = tweetobj.content.text;
     const dateCreated = timeago.format(tweetobj.created_at);
+
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
     
     const $tweet = $(`<article class="tweet">
     <header>
@@ -91,9 +97,10 @@ $(document).ready(function() {
       </div>
       <span class= "tweeter-tag"> ${handle} </span>
     </header>
-    <textarea name="text" class="tweet-text" readonly>
-      ${content}
-    </textarea>
+    <p class="tweet-text">
+      ${escape(content)}
+    </p>
+    <hr class="tweet-line" size="8" width="95%" color="black">   
     <footer> 
       <span class="time-ago">${dateCreated}</span>
       <div class="tweet-options">
@@ -108,10 +115,9 @@ $(document).ready(function() {
   };
 
   const renderTweets = function(tweets) {
-    //function that loops through tweets and calls createTweetElement for each tweet
-    let $tweet = {};
+    //function that loops through tweets and calls createTweetElement for each tweet  
     for (const tweet of tweets) {
-      $tweet = createTweetElement(tweet);
+      const $tweet = createTweetElement(tweet);
       $tweetContainer.append($tweet); //Appends return value to tweets container
     }
   }

@@ -1,7 +1,11 @@
+/* CSS for submitting new tweet form */
 .new-tweet{
   position:relative;
   top: 20px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 textarea#tweet-text {
@@ -47,6 +51,7 @@ label[for=tweet-text] {
   color:red;
 }
 
+/* Error message when it's visible */
 span.hidden-error-msg {
   display: flex;
   flex-direction: row;
@@ -56,6 +61,7 @@ span.hidden-error-msg {
   color:red;
 }
 
+/* State for hiding the error message (overriding display flex) */
 span.hidden-error-msg[hidden] {
   display: none;
 }

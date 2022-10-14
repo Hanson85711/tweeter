@@ -26,13 +26,32 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+  /* CSS for main tweets layout */
   main.container {
   gap: 40px;
   display: flex;
   align-self: center;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   padding-bottom: 40px;
   width: 90%;
   background-color: #f4ecec;
+ }
+
+ /* Layout for desktop ratios */
+ @media only screen and (min-width: 1024px) {
+  main.container { 
+    width: 55%;
+  }
+
+  section#page-container {
+    width: 100vw;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+
  }

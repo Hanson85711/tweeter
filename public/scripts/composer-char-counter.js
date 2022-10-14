@@ -1,3 +1,4 @@
+//Function that turns counter number red when over character limit
 $(document).ready(function() {
   $('#tweet-text').on("input", function() {
     let inputLength = $(this).val().length; //Gets character amount in form
