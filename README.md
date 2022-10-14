@@ -6,8 +6,8 @@ Tweeter was built to practice front-end work and uses HTML, CSS, JS, jQuery and 
 
 ## Preview 
 
-!["Desktop Layout Preview"]()
-!["Mobile Layout Preview"]()
+!["Desktop Layout Preview"](https://github.com/Hanson85711/tweeter/blob/master/public/images/Desktop-layout.png?raw=true)
+!["Mobile Layout Preview"](https://github.com/Hanson85711/tweeter/blob/master/public/images/Mobile-layout.png?raw=true)
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
