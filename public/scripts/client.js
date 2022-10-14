@@ -8,18 +8,18 @@ $(document).ready(function() {
 
   const $tweetContainer = $('#tweets-container');
 
-    //Initial renders of tweets from server
+  //Initial renders of tweets from server
   const loadTweets = function() {
     $.ajax({
       url: '/tweets',
       method: 'GET'
     })
-    .then(function (tweets) {
-      renderTweets(tweets);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+      .then(function(tweets) {
+        renderTweets(tweets);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   loadTweets();
@@ -29,16 +29,16 @@ $(document).ready(function() {
       url: '/tweets',
       method: 'GET'
     })
-    .then(function (tweets) {
-      let newTweet = createTweetElement(tweets[tweets.length -1]);
-      $tweetContainer.prepend(newTweet);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  }
+      .then(function(tweets) {
+        let newTweet = createTweetElement(tweets[tweets.length - 1]);
+        $tweetContainer.prepend(newTweet);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-  $('.tweet-form').submit(function (event) {
+  $('.tweet-form').submit(function(event) {
 
     //Gets data from form
     event.preventDefault();
@@ -46,31 +46,31 @@ $(document).ready(function() {
 
     //Error Message reveal if trying to submit when over chara limit
     if ($('#tweet-text').val().length > 140) {
-      return $('.hidden-error-msg').slideDown("slow", function () {
-       //anim finished
-      })
+      return $('.hidden-error-msg').slideDown("slow", function() {
+        //anim finished
+      });
     }
 
     //Submitting within chara limit makes error message go away
     if ($('#tweet-text').val().length < 140) {
-      $('.hidden-error-msg').slideUp("slow", function(){
+      $('.hidden-error-msg').slideUp("slow", function() {
         //anim finished
       });
     }
 
     //Sending to server via POST request
-    $.ajax({ 
-      method: 'POST', 
+    $.ajax({
+      method: 'POST',
       url: '/tweets',
       data: dataForAjax
     })
-    .then((tweet) => {
-      refetchTweets();
-      $('.tweet-form')[0].reset();
-    })
-    .catch((error) => {
-      console.log('error', error);
-    })
+      .then((tweet) => {
+        refetchTweets();
+        $('.tweet-form')[0].reset();
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
   });
 
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
     const content = tweetobj.content.text;
     const dateCreated = timeago.format(tweetobj.created_at);
 
-    const escape = function (str) {
+    const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -111,14 +111,14 @@ $(document).ready(function() {
     </footer>
   `);
 
-  return $tweet;
+    return $tweet;
   };
 
   const renderTweets = function(tweets) {
-    //function that loops through tweets and calls createTweetElement for each tweet  
+    //function that loops through tweets and calls createTweetElement for each tweet
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $tweetContainer.append($tweet); //Appends return value to tweets container
     }
-  }
-})
+  };
+});
