@@ -51,9 +51,20 @@ $(document).ready(function() {
       });
     }
 
+    //Error Message reveal if trying to submit an empty tweet
+    if ($('#tweet-text').val().length === 0) {
+      return $('.hidden-error-msg-notext').slideDown("slow", function() {
+        //anim finished
+      });
+    }    
+
     //Submitting within chara limit makes error message go away
     if ($('#tweet-text').val().length < 140) {
       $('.hidden-error-msg').slideUp("slow", function() {
+        //anim finished
+      });
+
+      $('.hidden-error-msg-notext').slideUp("slow", function() {
         //anim finished
       });
     }
@@ -67,6 +78,7 @@ $(document).ready(function() {
       .then((tweet) => {
         refetchTweets();
         $('.tweet-form')[0].reset();
+        $('#charcounter').html(140);
       })
       .catch((error) => {
         console.log('error', error);
@@ -118,7 +130,7 @@ $(document).ready(function() {
     //function that loops through tweets and calls createTweetElement for each tweet
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $tweetContainer.append($tweet); //Appends return value to tweets container
+      $tweetContainer.prepend($tweet); //Appends return value to tweets container
     }
   };
 });

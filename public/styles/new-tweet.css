@@ -51,7 +51,7 @@ label[for=tweet-text] {
   color:red;
 }
 
-/* Error message when it's visible */
+/* Over Character Limit Error message when it's visible */
 span.hidden-error-msg {
   display: flex;
   flex-direction: row;
@@ -63,5 +63,20 @@ span.hidden-error-msg {
 
 /* State for hiding the error message (overriding display flex) */
 span.hidden-error-msg[hidden] {
+  display: none;
+}
+
+/* Empty Tweet Error message when it's visible */
+span.hidden-error-msg-notext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family:'Source Sans Pro',sans-serif;
+  font-style: italic;
+  color:red;
+}
+
+/* State for hiding the error message (overriding display flex) */
+span.hidden-error-msg-notext[hidden] {
   display: none;
 }

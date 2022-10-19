@@ -63,6 +63,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <span type="error" class="hidden-error-msg-notext" hidden>Unable to post an empty tweet.</span>
         <span type="error" class="hidden-error-msg" hidden>Unable to post tweet due to character limit.</span>
         <form class="tweet-form" action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>
