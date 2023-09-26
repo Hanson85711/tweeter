@@ -6,7 +6,6 @@ section#tweets-container{
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  margin-right: 2em;
 }
 
 article.tweet{
@@ -74,15 +73,12 @@ span.time-ago{
 }
 
 p.tweet-text{
-  word-wrap: break-word; 
   margin-top: 1em;
-  margin-left: 3em;
-  margin-right: 3em;
   margin-bottom: 0.5em;
   resize: none;
   align-self: center;
   outline: 0;
-  width: 850px;
+  width: 93%;
   text-align: bottom;
   background-color: rgba(238, 238, 238, 0);
 }
