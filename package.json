@@ -1,12 +1,9 @@
 {
   "name": "tweeter",
-  "homepage": "https://hanson85711.github.io/tweeter",
   "version": "1.0.0",
   "description": "A twitter clone by Lighthouse Labs for web bootcamp students to learn front-end dev skillz",
   "main": "server/index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
     "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
@@ -20,7 +17,6 @@
     "md5": "^2.1.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0",
     "nodemon": "^1.9.2"
   }
 }
